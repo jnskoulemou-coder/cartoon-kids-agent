@@ -1,0 +1,12 @@
+.env
+client_secret.json
+token.json
+__pycache__/
+assets/*
+output/*
+logs/*
+!assets/.gitkeep
+!output/.gitkeep
+!logs/.gitkeep
+.topic_index
+.venv
