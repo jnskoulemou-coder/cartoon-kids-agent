@@ -30,14 +30,14 @@ def run_daily():
     result = main.run(topic)
 
     title = _make_title(result["topic"])
-    description = f"{result['narration']}\n\n#kidscartoon #funnyanimals #kidsstories"
+    description = f"{result['narration']}\n\n#funnycat #funnyrabbit #animalcomedy #catsvsrabbits"
 
     print("Uploading to YouTube (public)...")
     youtube_uploader.upload_video(
         result["video_path"],
         title=title,
         description=description,
-        tags=["kids cartoon", "funny animals", "kids stories", "children's animation"],
+        tags=["funny cat", "funny rabbit", "animal comedy", "cartoon animals", "cat and rabbit"],
         privacy_status="public",
     )
 
