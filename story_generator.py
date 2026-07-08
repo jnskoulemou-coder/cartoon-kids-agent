@@ -8,8 +8,10 @@ import config
 
 CONTENT_TYPES = {
     "animals": {
-        "label": "talking animal characters only (no fruit, no children). Always "
-        "include a funny rabbit and/or a funny cat among the characters, "
+        "label": "talking animal characters only (no fruit, no children). The MAIN character "
+        "and star of every story is always a funny cat - the cat should be the lead, driving "
+        "the story and getting the most screen time. A funny rabbit often appears as a "
+        "secondary character/rival or friend, "
         "with a fun, comedic tone - make it genuinely funny, aimed at making viewers laugh. "
         "Classic slapstick chase-comedy style (in the spirit of a lighthearted cat-and-mouse "
         "rivalry cartoon) works great: silly chases, near-misses, clever tricks, physical "
