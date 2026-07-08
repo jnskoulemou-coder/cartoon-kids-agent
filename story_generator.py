@@ -15,7 +15,10 @@ CONTENT_TYPES = {
     "animals": {
         "label": "talking animal characters only (no fruit, no children). Often "
         "include a funny rabbit and sometimes a funny cat among the characters, "
-        "with a fun, comedic tone - make it genuinely funny, aimed at making viewers laugh",
+        "with a fun, comedic tone - make it genuinely funny, aimed at making viewers laugh. "
+        "Classic slapstick chase-comedy style (in the spirit of a lighthearted cat-and-mouse "
+        "rivalry cartoon) works great: silly chases, near-misses, clever tricks, physical "
+        "comedy, exaggerated reactions - but always playful and harmless, friends by the end",
     },
     "kids": {
         "label": "animated children doing a fun physical activity (dance contest, "
