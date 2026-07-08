@@ -7,34 +7,15 @@ from anthropic import Anthropic
 import config
 
 CONTENT_TYPES = {
-    "fruits": {
-        "label": "talking fruit characters only (no animals, no children), who meet each "
-        "other and get into a funny, silly situation - make it genuinely funny, aimed at "
-        "making viewers laugh, with slapstick or witty character moments",
-    },
     "animals": {
-        "label": "talking animal characters only (no fruit, no children). Often "
-        "include a funny rabbit and sometimes a funny cat among the characters, "
+        "label": "talking animal characters only (no fruit, no children). Always "
+        "include a funny rabbit and/or a funny cat among the characters, "
         "with a fun, comedic tone - make it genuinely funny, aimed at making viewers laugh. "
         "Classic slapstick chase-comedy style (in the spirit of a lighthearted cat-and-mouse "
         "rivalry cartoon) works great: silly chases, near-misses, clever tricks, physical "
         "comedy, exaggerated reactions - but always playful and harmless, friends by the end. "
         "Also mix in fun dance moments - a cat busting silly dance moves, a rabbit hopping "
         "and dancing, animals having a dance-off together - for variety alongside the chases",
-    },
-    "kids": {
-        "label": "animated children doing a fun physical activity (dance contest, "
-        "running race, bike ride, hide and seek, etc.), no talking fruits or animals",
-    },
-    "battle": {
-        "label": "animated children (or superhero kids) having a fun, silly, completely "
-        "harmless pretend battle (superhero powers, pillow fight, water balloon fight, "
-        "obstacle course duel). Playful and funny, absolutely no real violence, no "
-        "weapons, nobody gets hurt - it is a game between friends",
-    },
-    "mixed": {
-        "label": "a mix of talking fruits, talking animals, AND children together "
-        "in the same story, interacting with each other",
     },
 }
 
