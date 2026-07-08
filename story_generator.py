@@ -19,7 +19,14 @@ CONTENT_TYPES = {
         "Also mix in fun dance moments - a cat busting silly dance moves, a rabbit hopping "
         "and dancing, animals having a dance-off together - for variety alongside the chases",
     },
+    "journey": {
+        "label": "a friendly elephant and a group of children traveling together on a journey "
+        "to find delicious fruit, then organizing a joyful ceremony/feast and eating together "
+        "once they succeed. Warm, adventurous, heartwarming tone with lots of walking/traveling, "
+        "climbing, searching, and celebrating (dancing, drumming, sharing food)",
+    },
 }
+
 
 SYSTEM_PROMPT_TEMPLATE = """You write short children's cartoon video scripts (TikTok/Reels/Shorts), \
 in ENGLISH only. The subject of this video: {label}.

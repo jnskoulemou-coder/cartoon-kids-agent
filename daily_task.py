@@ -25,19 +25,25 @@ def _make_title(topic: str) -> str:
 
 def run_daily():
     index = _next_index()
-    topic = TOPICS[index]
-    print(f"[daily_task] Topic {index + 1}/{len(TOPICS)}: {topic}")
-    result = main.run(topic)
+    entry = TOPICS[index]
+    print(f"[daily_task] Topic {index + 1}/{len(TOPICS)}: [{entry['type']}] {entry['topic']}")
+    result = main.run(entry["topic"], entry["type"])
 
     title = _make_title(result["topic"])
-    description = f"{result['narration']}\n\n#funnycat #funnyrabbit #animalcomedy #catsvsrabbits"
+    if entry["type"] == "journey":
+        hashtags = "#kidsadventure #elephant #funforkids #storytime"
+        tags = ["kids adventure", "elephant", "children's story", "fruit adventure"]
+    else:
+        hashtags = "#funnycat #funnyrabbit #animalcomedy #catsvsrabbits"
+        tags = ["funny cat", "funny rabbit", "animal comedy", "cartoon animals", "cat and rabbit"]
+    description = f"{result['narration']}\n\n{hashtags}"
 
     print("Uploading to YouTube (public)...")
     youtube_uploader.upload_video(
         result["video_path"],
         title=title,
         description=description,
-        tags=["funny cat", "funny rabbit", "animal comedy", "cartoon animals", "cat and rabbit"],
+        tags=tags,
         privacy_status="public",
     )
 
