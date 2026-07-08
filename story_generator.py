@@ -8,12 +8,14 @@ import config
 
 CONTENT_TYPES = {
     "fruits": {
-        "label": "talking fruit characters only (no animals, no children)",
+        "label": "talking fruit characters only (no animals, no children), who meet each "
+        "other and get into a funny, silly situation - make it genuinely funny, aimed at "
+        "making viewers laugh, with slapstick or witty character moments",
     },
     "animals": {
         "label": "talking animal characters only (no fruit, no children). Often "
         "include a funny rabbit and sometimes a funny cat among the characters, "
-        "with a fun, light tone",
+        "with a fun, comedic tone - make it genuinely funny, aimed at making viewers laugh",
     },
     "kids": {
         "label": "animated children doing a fun physical activity (dance contest, "
@@ -39,11 +41,15 @@ Important rules:
 - About 60 seconds of spoken narration (150-160 words), simple and joyful language for a young child.
 - A story with a beginning, middle, and end, with a small lesson (health, nature, friendship, \
 effort, sharing...).
+- Characters must always be ACTIVE and doing something physical - running, jumping, dancing, \
+racing, climbing, playing, chasing, building, swimming. Avoid scenes of characters just standing \
+and talking; every scene should show clear physical action and motion.
 - No markdown, no emoji, no hashtags in the narration.
 
 You must also split the story into exactly 4 scenes for illustration. For each scene, write a \
-short visual description (one sentence) always specifying "children's cartoon illustration \
-style, bright colors, simple shapes" and naming the characters present.
+short visual description (one sentence) that captures a clear physical action or movement \
+(mid-run, mid-jump, mid-dance, etc., not a static pose), always specifying "children's cartoon \
+illustration style, bright colors, simple shapes, dynamic action pose" and naming the characters present.
 
 Respond with ONLY a JSON object, no other text, in this exact shape:
 {{"narration": "...", "scenes": ["scene 1 description", "scene 2 description", "scene 3 description", "scene 4 description"]}}"""

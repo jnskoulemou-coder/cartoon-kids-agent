@@ -10,3 +10,4 @@ logs/*
 !logs/.gitkeep
 .topic_index
 .venv
+*TEMP_MPY_*

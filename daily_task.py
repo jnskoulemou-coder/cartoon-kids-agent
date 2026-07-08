@@ -57,7 +57,10 @@ def _cleanup(result: dict) -> None:
     for path in paths_to_remove:
         path = Path(path)
         if path.exists():
-            path.unlink()
+            try:
+                path.unlink()
+            except OSError as e:
+                print(f"Could not delete {path}: {e}")
     print("Cleaned up local video and working files.")
 
 

@@ -4,6 +4,7 @@ from pathlib import Path
 
 import config
 import image_generator
+import motion_generator
 import story_generator
 import video_assembler
 import voice_generator
@@ -26,11 +27,18 @@ def run(topic: str, content_type: str = None) -> dict:
     voice_generator.generate_voice(story["narration"], voice_path)
 
     print("Generating scene images...")
-    scene_paths = []
+    scene_image_paths = []
     for i, scene in enumerate(story["scenes"]):
         scene_path = config.ASSETS_DIR / f"{slug}_scene{i + 1}.png"
         image_generator.generate_image(scene, scene_path)
-        scene_paths.append(scene_path)
+        scene_image_paths.append(scene_path)
+
+    print("Animating scenes...")
+    scene_paths = []
+    for i, (scene_image, scene_desc) in enumerate(zip(scene_image_paths, story["scenes"])):
+        motion_path = config.ASSETS_DIR / f"{slug}_scene{i + 1}_motion.mp4"
+        motion_generator.generate_motion(scene_image, motion_path, prompt_text=scene_desc)
+        scene_paths.append(motion_path)
 
     print("Assembling final video...")
     output_path = config.OUTPUT_DIR / f"{slug}.mp4"
@@ -47,7 +55,7 @@ def run(topic: str, content_type: str = None) -> dict:
         "downloads_copy": downloads_copy,
         "script_path": script_path,
         "voice_path": voice_path,
-        "scene_paths": scene_paths,
+        "scene_paths": scene_image_paths + scene_paths,
         "narration": story["narration"],
         "content_type": story["content_type"],
         "topic": topic,
