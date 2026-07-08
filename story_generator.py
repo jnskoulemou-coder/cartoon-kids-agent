@@ -19,8 +19,8 @@ CONTENT_TYPES = {
         "Classic slapstick chase-comedy style (in the spirit of a lighthearted cat-and-mouse "
         "rivalry cartoon) works great: silly chases, near-misses, clever tricks, physical "
         "comedy, exaggerated reactions - but always playful and harmless, friends by the end. "
-        "Also mix in fun dance moments - a cat busting silly dance moves, animals having a "
-        "dance-off - for variety alongside the chases",
+        "Also mix in fun dance moments - a cat busting silly dance moves, a rabbit hopping "
+        "and dancing, animals having a dance-off together - for variety alongside the chases",
     },
     "kids": {
         "label": "animated children doing a fun physical activity (dance contest, "
